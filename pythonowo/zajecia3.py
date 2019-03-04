@@ -90,29 +90,3 @@ for i in range(1500, 2701):
         sleep(2)
 
 #o tyle jest dobre ze nie trzeba inkrementowac
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
