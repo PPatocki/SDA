@@ -101,29 +101,4 @@ z.sort()
 for k, v in data.items():
     if v in z[-3:]:
         print(k, v)
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# nie dziala jak cos
