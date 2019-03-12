@@ -10,6 +10,8 @@ class Class():
         if damage_delt > 0:
             obj.take_damage(damage_delt)
         
+    def __str__(self):
+        return f'{type(self).__name__}'
 
 class Mage(Class):
     def __init__(self, armour=2, max_attack=15, *args, **kwargs):
