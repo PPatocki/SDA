@@ -1,0 +1,32 @@
+orc:
+  name: Doop'pa
+  class: Warrior
+  hp: 10
+  armour: 5
+  skills:
+    - vomit
+    - attack
+    - shit
+  other_skills: [vomit, attack, kill]
+
+# sluzy m/in do konfiguracji CI/CD
+
+hobbit:
+  name: Sam Lajza
+  class: Thief
+  hp: 10
+  armour: 5
+  skills:
+    - dziesiona
+    - attack pierscieniem
+    - zmylka wloszczyzna
+
+elf:
+  name: Gulczas
+  class: Mage
+  hp: 15
+  armour: 7
+  skills:
+    - attack z bani
+    - look zza oksa
+    - strzal pojara

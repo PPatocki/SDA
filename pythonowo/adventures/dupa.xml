@@ -1,0 +1,11 @@
+<heroes>
+    <Orc hp="10" armour="5">
+        <name>Doop'pa</name>
+        <class>Warrior</class>
+    </Orc>
+    <Elf hp="10" armour="5">
+        <name>Legolas</name>
+        <class>Archer</class>
+    </Elf>
+    
+</heroes>
