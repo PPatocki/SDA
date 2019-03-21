@@ -33,3 +33,23 @@
 docker run i tu np mysql:5.5
 dockerHub?, hubdocker.io
 docker run mysql:5.5 -v data:data podmontowuje katalog data wewnatrz kontenera do katalogu na kompie
+
+docker ps pokazuje kontenery dzialajace
+
+docker run --name=mysql1 -d mysql/mysql-server:5.5
+docker container list
+docker image list
+
+docker exec -it(interaktywnie) mysql1 bash
+docker logs mysql1
+
+docker > kubernetes > openshift
+
+
+
+
+
+
+
+
+
