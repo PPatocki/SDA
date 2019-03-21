@@ -1,0 +1,35 @@
+2234  docker
+ 2235  sudo apt install docker.io
+ 2236  docker
+ 2240  docker --version
+ 2241  docker run hello-world
+ 2242  sudo docker run hello-world
+ 2243  grep docker /etc/group
+ 2244  sudo groupadd docker
+ 2245  grep docker /etc/group
+ 2246  exit
+ 2247  grep docker /etc/group
+ 2248  docker run hello-world
+ 2249  sudo docker run hello-world
+ 2250  groups cray
+ 2251  sudo usermod -aG docker cray
+ 2252  docker info
+ 2253  sudo groupadd Docker
+ 2254  docker info
+ 2255  groups cray
+ 2256  sudo docker info
+ 2257  docker info
+ 2258  sudo usermod -aG Docker cray
+ 2259  docker info
+ 2260  groups cray
+ 2261  sudo chmod a+rwx /var/run/docker.sock
+ 2262  sudo chmod a+rwx /var/run/docker.pid
+ 2263  docker info
+ 
+##############################################################################################3
+
+
+
+docker run i tu np mysql:5.5
+dockerHub?, hubdocker.io
+docker run mysql:5.5 -v data:data podmontowuje katalog data wewnatrz kontenera do katalogu na kompie
