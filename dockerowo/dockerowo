@@ -45,6 +45,110 @@ docker logs mysql1
 
 docker > kubernetes > openshift
 
+##################3zajecia2 ################3
+Docker zapewnia izolacje wiec jest to bezpieczne, ale nie zaladuje modulu do kernela albo nie skontaktuje sie z firewallem
+
+docker image pull nginx
+docker run -d --name nginx-test -p 8080:80 nginx
+docker container inspect nginx-test
+
+docker stop nginx-test
+docker ps -a
+docker rm nginx-test usuwa kontener
+docker rmi nginx-test usuwa obraz
+
+budowanie kontenerow ###################################################
+
+przy alpine jest apk zamiast apt
+docker image pull alpine
+
+docker run -it --rm alpine /bin/ash
+robisz jak chcesz sprawdzic czy cos zadziala bo rm usunie kontener po wyjsciu
+
+alpine to dystrybucja linuxa totalnie ogolocona stosowana do budowy kontenerow
+
+entry point to proces wykonywany na koncu ktory jest sednem istnienia kontenera. po jego ubiciu kontener pada
+
+dockerowe pliki sa .yaml
+wget http://dl-8.alpinelinux.org/alpine/v3.6/releases/x86_64/alpine-minirootfs-3.6.1-x86_64.tar.gz
+
+docker build --tag=alpine:0.1 .
+docker run -it 7a87e7bcd194 /bin/sh
+
+docker run --name some-mongo -d mongo
+docker ps
+docker run -it --network some-net mongo mongo --host some-mongo test
+
+2378  docker ps
+ 2379  docker stop ee461090d2a9
+ 2380  docker rm ee461090d2a9
+ 2381  docker ps -a
+ 2382  docker ps -a | grep mongo
+ 2383  docker stop 90a2ce7126ac
+ 2384  docker rm 90a2ce7126ac
+ 2385  docker rmi mongo
+
+czyszczenie 
+docker kill $(docker ps -q)  zabija aktywne kontenery
+docker rm $(docker ps -q -a) deletuje kontenery
+docker rmi $(docker images -q) wywala obraz
+
+CMD startuje podczas odpalania kontenera
+RUN dziala podczas budowania obrazu
+
+
+docker build --tag local/php7 .
+docker image ls
+docker run -d -p 8080:80 fefe16ba0c28
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
