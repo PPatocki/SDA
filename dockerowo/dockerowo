@@ -98,16 +98,56 @@ RUN dziala podczas budowania obrazu
 
 
 docker build --tag local/php7 .
+--tag local/doom:0.1 .
 docker image ls
 docker run -d -p 8080:80 fefe16ba0c28
 
 
+docker login
+docker image tag e424e9298457 patocki/flashdoom:1.0
+docker image push patocki/flashdoom:1.0
+
+
+####################3 nowy Dockerfile ############
+FROM patocki/flashdoom
+RUN rm -rf /var/www/localhost/htdocs/index.html
+COPY files/index.html /var/www/localhost/htdocs/
+
+
+/\ ogolocony, robiac pulla reszta sobie porzadzi z budowaniem
+obraz juz jest
+
+###########################3
+wolumeny - persistent storage
+katalog wenatrz kontenera zmapowany na katalog na zewnatrz kontenera
+np OverlayFS?
+
+docker run -it -v /home/cray/SDA/dockerowo:/files alpine /bin/sh
+mount | grep files
+tu wyswietli gdzie jest podlaczone
+alpine ... wpisujemy zeby dzialac na shellu wewnatrz kontenera
+
+Podpinamy wolumen przy tworzeniu nowej infrastruktury. Przy istniejacych kontenerach raczej sie nie da. Chyba, ze jest o baza danych to jakies rozwiazanie musi byc
 
 
 
+############################# COMPOSE ###############################
+docker network create my-net # to jest nazwa
+sieci moga byc bridge(default), host, null
 
+redis - baza danych w pamieci, super szybka
+docker pull redis:alpine
+docker image pull russmckendrick/moby-counter
 
+docker container run -d --name redis --network my-net redis:alpine
 
+docker container run -d --name moby-counter --network my-net -p 8080:80 russmckendrick/moby-counter
+
+jak jest plik docker-compose.yml
+to wpisuje
+docker-compose up i smiga
+docker-compose start juz na produkcji
+/stop
 
 
 
