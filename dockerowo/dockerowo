@@ -117,10 +117,13 @@ COPY files/index.html /var/www/localhost/htdocs/
 /\ ogolocony, robiac pulla reszta sobie porzadzi z budowaniem
 obraz juz jest
 
-###########################3
+###########################   WOLUMENY  ############################3
 wolumeny - persistent storage
 katalog wenatrz kontenera zmapowany na katalog na zewnatrz kontenera
 np OverlayFS?
+
+docker volume create Volumen
+docker run -v Volumen:/katalog
 
 docker run -it -v /home/cray/SDA/dockerowo:/files alpine /bin/sh
 mount | grep files
@@ -149,6 +152,17 @@ docker-compose up i smiga
 docker-compose start juz na produkcji
 /stop
 
+#########################################################
+docker ps
+docker attach abc123ntg555- wchodzi do dzialajacego kontenera
+
+############# KUBERNETES
+minikube....
+narzedzie do zarzadzania klastrami?
+OpenStack - oprogramowanie do wirtualizacji na wielka skale jak DataCentre
+
+
+OpenShift narzedzie sluzace do zarzadzania i skalowaniem kontenerami
 
 
 
