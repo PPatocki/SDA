@@ -127,6 +127,11 @@ docker run -v Volumen:/katalog
 
 docker run -it -v /home/cray/SDA/dockerowo:/files alpine /bin/sh
 mount | grep files
+
+docker exec -it idcontenera /bin/sh
+/\ to wchodzi do ddzialajacego kontenera z shelem zeby sobie posmigac
+
+
 tu wyswietli gdzie jest podlaczone
 alpine ... wpisujemy zeby dzialac na shellu wewnatrz kontenera
 
@@ -158,54 +163,51 @@ docker attach abc123ntg555- wchodzi do dzialajacego kontenera
 
 ############# KUBERNETES
 minikube....
+minishift...
+male wersje do sprawdzenia jak to dziala. Odpala sie na jednej maszynie
 narzedzie do zarzadzania klastrami?
 OpenStack - oprogramowanie do wirtualizacji na wielka skale jak DataCentre
 
-
+okd = openshift tylko darmowy
 OpenShift narzedzie sluzace do zarzadzania i skalowaniem kontenerami
+to nakladka na kubernetesa
+albo kubernetes albo Openshift ktory zawiera w sobie kubernetesa
+
+docker inspect
+
+docker run -p 8080:80 -e PHPVERSION="5"
+-p jak port
+-e jako ENV czyli zmienna srodowiskowa
+-d detach
+-v volume
+
+FROM alpine:latest
+LABEL mainter="ktokolwiek <someone@example.com>"
+LABEL description="Docker with apacheand php7"
+#ooo TU ENV PHPVERSION 7
+RUN apk add --update apache2 php${PHPVERSION}-apache2 php${PHPVERSION} && \
+rm -rf /var/cache/apk/* && \
+rm -rf /run/apache2 && \
+mkdir /run/apache2 && \
+rm -rf /var/www/localhost/htdocs/index.html && \
+echo "<?php phpinfo(); ?>" > /var/www/localhost/htdocs/index.php && \
+chmod 755 /var/www/localhost/htdocs/index.php
+#ADD files/moja_gra.php /var/www
+EXPOSE 80/tcp
+ENTRYPOINT ["httpd"]
+CMD ["-D", "FOREGROUND"]
+#COPY
+#ADD
 
 
+docker network prune
+docker container prune
+docker image prune
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+komenda prune czysci 
+kontenery niedzialajace
+image na podstawie ktorych nic nie zostalo zbudowane
+networki nieuzywane
 
 
 
