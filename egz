@@ -1,0 +1,13 @@
+3 zadania!
+na OPENSTACKU
+
+1: uzywajac ansibla przez loadbalancera/gateway(task zeby tez loadbalancera zdeployowc) zdeployowac   3 trzema VMkami
+   extra: tunel przez ssh
+   to wypuscic na repo
+
+2: PYTHON, Docker. to zadanie z Dockerfilem. Protokoly http
+
+3: Postawic VMki?!?!?!?! Pokonfigurowac w chuj. 
+   Extra: zrobic to naa chmurze
+
+AWS CloudFormation - templaty, ktore tworza infrastrukture na click

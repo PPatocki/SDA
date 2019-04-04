@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Najlepszej jakości ziemia, podłoża do kwiatów i roślin ogrodowych.">
+    <meta name="keywords" content="Athena, ziemia, najlepszej jakości ziemia, podłoża do kwiatów, ogrodnictwo, kora, podłoża do roślin ogrodowych, 
+    ziemia kwiatowa, torf, mieszanka torfowa, torf ogrodniczy, substrat, podłoże do iglaków, zrębki ogrodowe, ziemia do roślin balkonowych, kora ogrodnicza, 
+    podłoże pod storczyki.">
+    <title>Bioprodukty Athena - Ziemia Kwiatowa, Torf Ogrodniczy, Podłoże do iglaków.</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Playfair+Display&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="top-nav">
+        <ul class="menu">
+            <a href="o-nas.html"><li class="menu-item">O nas</li></a>
+            <a href="produkty.html"><li class="menu-item">Produkty</li></a>
+            <a href="galeria.html"><li class="menu-item">Galeria</li></a>
+            <a href="kontakt.html"><li class="menu-item">Kontakt</li></a>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <section class="container">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.jpg"></a><br>
+            <h1 id="h">info@athena.com.pl</h1>
+        </div>
+        <div class="content">
+            <div id="contact">
+                <div>
+                    <span>Zakład torfowy Samlino</span><br><br>
+                    Samlino 36, 72-410<br>
+                    Golczewo<br><br>
+                    Tel/Fax:<br>
+                    +48 91 386 01 17<br><br>
+                    E-mail:
+                    samlino@athena.com.pl
+                </div>
+                <div>
+                    <span>Zakład torfowy Parsęcko</span><br><br>
+                    Parsęcko 136, 78-415<br>
+                    Szczecinek<br><br>
+                    Tel/Fax:<br>
+                    +48 94 375 76 12<br><br>
+                    E-mail: parsecko@athena.com.pl
+                </div>
+                <div>
+                    <span>Zakład torfowy Reptowo</span><br><br>
+                    Reptowska 123, 12-345<br>
+                    Kobylanka<br><br>
+                    Tel/Fax:<br>
+                    +48 12 345 67 89<br><br>
+                    E-mail: reptowo@athena.com.pl
+
+                </div>
+            </div>
+            <div id="map"></div>
+           
+            <script>        
+                function initMap(){
+                    // Map options
+                    var options = {
+                    zoom:8,
+                    center:{lat:53.527172,lng:15.806429}
+                    }
+        
+                    // New map
+                    var map = new google.maps.Map(document.getElementById('map'), options);
+
+                    // Array of markers
+                    var markers = [
+                    {
+                    coords:{lat:53.846565,lng:14.962368},
+                    content:'<h1>Samlino</h1>'
+                    },
+                    {
+                    coords:{lat:53.708845,lng:16.576038},
+                    content:'<h1>Parsecko</h1>'
+                    },
+                    {
+                    coords:{lat:53.365644,lng: 14.861515},
+                    content:'<h1>Reptowo</h1>'
+                    }
+                    ];
+        
+                    // Loop through markers
+                    for(var i = 0;i < markers.length;i++){
+                    // Add marker
+                    addMarker(markers[i]);
+                    }
+        
+                    // Add Marker Function
+                    function addMarker(props){
+                    var marker = new google.maps.Marker({
+                    position:props.coords,
+                    map:map,
+                    animation: google.maps.Animation.DROP,
+                    //icon:props.iconImage
+                    });
+        
+                    // Check for customicon
+                    if(props.iconImage){
+                    // Set icon image
+                    marker.setIcon(props.iconImage);
+                    }
+        
+                    // Check content
+                    if(props.content){
+                    var infoWindow = new google.maps.InfoWindow({
+                    content:props.content
+                    });
+        
+                    marker.addListener('click', function(){
+                    infoWindow.open(map, marker);
+                    }); 
+
+                    
+                }
+                }
+            }
+            </script>
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAf8LqHMKkGm-gVxaw3Je2xTPVsruu780E&callback=initMap">
+            </script>
+        </div>
+    </section>
+    <footer class="footer">
+        <div>Bio-Produkty Sp. z o.o.</div>
+        <div> &copy; 2018 www.athena.com.pl</div>
+        <div>info@athena.com.pl</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+Egzamin:
+-chmury inne niz AWS
+-serwer w pythonie?!?!?
+jak komunikuja sie VMki miedzy soba
+
+#######################################################
+ANSIBLE
+
+MobaXtreme - terminal?
+Przykladowy YAML aka Playbook
+all:
+  hosts:
+    mail.example.com
+  children:
+    webservers:
+      hosts:
+        foo.example.com
+        bar.example.com
+    dbservers:
+      hosts:
+        one.example.com
+        two.example.com
+        three.exmaple.com  
+
+KATAKODA
+
+
