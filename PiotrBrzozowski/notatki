@@ -1,0 +1,50 @@
+GET request w protokole http. To takie puk puk daj cos
+http://localhost:8080/user?age=26&kolor=rudy
+request body niedozwolone response opcjonalne
+
+POST wysyla dane na serwer
+req i resp body opcjonalne
+ta metoda przekazujemy obiekty json itp do serwera
+
+PUT podobna do POST, ale dziala bardziej jako aktualizacja a POST cos nowego
+
+DELETE - kasowanie jakis elementow z bazy danych
+tu tez req i resp opcjonalne
+
+HEAD - precyzujemy parametry naglowka - req i resp body niedozwolone
+Tu dajemy info mowiace jak bedziemy gadac z serwerem, formaty itp itd
+Sa zawarte naglowki zarowno w zapytaniach jak i odpowiedziach
+
+#############################################################################################
+
+REST API na jsonie (SOAP na XMLu) - jest to wzorzec projektowy protokolu http
+
+REpresentational State Transfer
+
+GET /movie - Get list of movies
+GET /movie/:id - Find movie by its id
+POST /movies - Create a new movie
+PUT /movies - Update an existing movie
+DELETE /movies - Delete an existing movie
+
+######
+Serializacja - sprowadzenie do formatu zrozumialego dla kazdego jezyka. do JSONa
+
+wget?
+curl do odpytywania serwera
+curl onet.pl
+-d to cialo do wyslania
+-i verbose
+-X nazwa metoda
+-H header
+https://exchangeratesapi.io
+java -jar nazwa
+8090
+
+
+
+
+
+
+
+
