@@ -42,6 +42,31 @@ java -jar nazwa
 8090
 
 
+########################## 08.04.2019 ###############################
+200 all good
+300 redirect
+400 klient sformulowal zle zapytanie, u nas gitara
+500 blad serwera czyli nasz problem
+
+############ FLASK ##############
+napisac apke obslugujaca protokol http
+
+nie trzeba programowac obslugi warst sieciowych.
+Skupiamy sie na pisaniu apki, ktora wkladamy do boxa tworzonego przez flaska
+project/
+  __init__.py
+  templates/
+    base.html
+    post.html
+
+
+
+
+
+
+
+
+
 
 
 
