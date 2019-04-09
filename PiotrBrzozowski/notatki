@@ -58,6 +58,11 @@ project/
   templates/
     base.html
     post.html
+CRUD
+Create
+Read
+Update
+Delete
 
 
 
