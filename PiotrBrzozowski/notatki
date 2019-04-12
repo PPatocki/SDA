@@ -19,7 +19,7 @@ Sa zawarte naglowki zarowno w zapytaniach jak i odpowiedziach
 
 REST API na jsonie (SOAP na XMLu) - jest to wzorzec projektowy protokolu http
 
-REpresentational State Transfer
+REpresentational State Transfer - JSON
 
 GET /movie - Get list of movies
 GET /movie/:id - Find movie by its id
@@ -64,17 +64,10 @@ Read
 Update
 Delete
 
+#################################################################################################
 
+####################################  A  Z  U  R  E  ############################################
 
-
-
-
-
-
-
-
-
-
-
+################################################################################################
 
 
